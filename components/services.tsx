@@ -218,7 +218,7 @@ export function ServicesBDesktopInteractive() {
   const [idx, setIdx] = useState(0);
   return (
     <div onClickCapture={(e) => {
-      let el = e.target;
+      let el = e.target as any;
       while (el && el !== e.currentTarget) {
         if (el.tagName === 'BUTTON' && el.classList.contains('tab-pill')) {
           const next = parseInt(el.getAttribute('data-index'), 10);
@@ -288,7 +288,7 @@ export function ServicesBMobileInteractive() {
   const [idx, setIdx] = useState(0);
   return (
     <div onClickCapture={(e) => {
-      let el = e.target;
+      let el = e.target as any;
       while (el && el !== e.currentTarget) {
         if (el.tagName === 'BUTTON' && el.classList.contains('tab-pill')) {
           const next = parseInt(el.getAttribute('data-index'), 10);
