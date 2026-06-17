@@ -197,7 +197,7 @@ export function HomeV6Mobile() {
       
       <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '48px 20px', position: 'relative', overflow: 'hidden', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <SideRays speed={1} rayColor1="#3B82F6" rayColor2="#C4622D" origin="top-left" opacity={0.3} intensity={0.5} falloff={1.8} tilt={-5} blend={0.1} spread={20} />
+          <SideRays speed={0.7} rayColor1="#3B82F6" rayColor2="#C4622D" origin="top-left" opacity={0.9} intensity={1} falloff={1} tilt={-5} spread={20} />
         </div>
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: `linear-gradient(to bottom, rgba(247,245,242,0) 88%, rgba(247,245,242,0.3) 93%, rgba(247,245,242,0.7) 97%, #f7f5f2 100%)` }} />
         <WFade>
