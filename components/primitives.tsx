@@ -116,7 +116,7 @@ export function WNavMobile({ dark }: any) {
 export function WFooter({ mobile }: { mobile?: boolean }) {
   const logoSrc = '/logos/true-signal-lockup-A-primary-light.svg';
   if (mobile) return (
-    <div style={{ background: WIRE_NAVY, color: '#cfd2da', padding: '32px 20px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 18 }}>
+    <div style={{ background: WIRE_NAVY, color: '#cfd2da', padding: '32px 20px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 18, flexGrow: 1 }}>
       <img src={logoSrc} alt="True Signal"
            style={{ height: 24, width: 'auto', display: 'block', alignSelf: 'flex-start' }} />
       <div style={{ display: 'flex', gap: 18, fontSize: 13, flexWrap: 'wrap' }}>
@@ -130,7 +130,7 @@ export function WFooter({ mobile }: { mobile?: boolean }) {
   );
   return (
     <div style={{ background: WIRE_NAVY, color: '#cfd2da', padding: '48px 56px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexGrow: 1 }}>
       <img src={logoSrc} alt="True Signal"
            style={{ height: 28, width: 'auto', display: 'block' }} />
       <div style={{ display: 'flex', gap: 28, fontSize: 13 }}>

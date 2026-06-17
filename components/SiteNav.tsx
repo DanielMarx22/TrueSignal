@@ -72,8 +72,8 @@ export function SiteNav({ dark = true }: { dark?: boolean }) {
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div style={{ 
-          position: 'fixed', inset: 0, zIndex: 100, background: WIRE_NAVY, color: '#f3efe8',
-          display: 'flex', flexDirection: 'column', padding: '20px'
+          position: 'fixed', inset: 0, zIndex: 100000, background: WIRE_NAVY, color: '#f3efe8',
+          display: 'flex', flexDirection: 'column', padding: '20px', paddingTop: 'calc(env(safe-area-inset-top) + 20px)'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <img 
