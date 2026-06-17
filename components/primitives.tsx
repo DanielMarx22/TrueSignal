@@ -45,12 +45,12 @@ export function WLabel({ children, dim, style }: any) {
 }
 
 // Handwritten margin annotation — orange-ish, Caveat.
-export function WNote({ children, style, dim }) {
+export function WNote({ children, style, dim }: any) {
   return <span className={'wnote' + (dim ? ' wnote-dim' : '')} style={style}>{children}</span>;
 }
 
 // Block-level annotation, includes a leader line.
-export function WNoteBlock({ children, style }) {
+export function WNoteBlock({ children, style }: any) {
   return (
     <div className="wnote-block" style={{ position: 'relative', ...style }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 6 }}>
@@ -67,7 +67,7 @@ export function WNoteBlock({ children, style }) {
 }
 
 // Site nav placeholder
-export function WNav({ dark }) {
+export function WNav({ dark }: any) {
   const fg = dark ? '#f3efe8' : WIRE_INK;
   return (
     <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '40px 80px', color: fg, position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10 }}>
@@ -89,7 +89,7 @@ export function WNav({ dark }) {
 }
 
 // Mobile nav (just logo + hamburger)
-export function WNavMobile({ dark }) {
+export function WNavMobile({ dark }: any) {
   const fg = dark ? '#f3efe8' : WIRE_INK;
   return (
     <div style={{
@@ -145,7 +145,7 @@ export function WFooter({ mobile }: { mobile?: boolean }) {
 }
 
 // "X" image placeholder with optional caption (caption uses hand font).
-export function WImg({ aspect = '16 / 9', caption, dark, style }) {
+export function WImg({ aspect = '16 / 9', caption, dark, style }: any) {
   return (
     <div style={{
       position: 'relative', aspectRatio: aspect, width: '100%',
@@ -168,7 +168,7 @@ export function WImg({ aspect = '16 / 9', caption, dark, style }) {
 }
 
 // A single bar (placeholder for a line of text).
-export function WBar({ w = '100%', h = 10, light, style }) {
+export function WBar({ w = '100%', h = 10, light, style }: any) {
   return <div className={'wbar' + (light ? ' wbar-light' : '')} style={{ width: w, height: h, ...style }} />;
 }
 
@@ -178,7 +178,7 @@ export function WBar({ w = '100%', h = 10, light, style }) {
 export function WPara() { return null; }
 
 // Buttons
-export function WBtnPrimary({ children, mobile, href, onClick }) {
+export function WBtnPrimary({ children, mobile, href, onClick }: any) {
   const btn = (
     <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={onClick} className="wbtn-primary" style={mobile ? { padding: '12px 18px', fontSize: 13 } : {}}>
       {children} →
@@ -187,7 +187,7 @@ export function WBtnPrimary({ children, mobile, href, onClick }) {
   if (href) return <Link href={href} style={{textDecoration: 'none', display: 'inline-block'}}>{btn}</Link>;
   return btn;
 }
-export function WBtnOutline({ children, onDark, mobile, href, onClick }) {
+export function WBtnOutline({ children, onDark, mobile, href, onClick }: any) {
   const btn = (
     <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={onClick} className={'wbtn-outline' + (onDark ? ' on-dark' : '')} style={mobile ? { padding: '11px 18px', fontSize: 13 } : {}}>
       {children} →
@@ -198,7 +198,7 @@ export function WBtnOutline({ children, onDark, mobile, href, onClick }) {
 }
 
 // Generic light-orange highlight wrapper for "emphasis here" hand-circled feel.
-export function WCircle({ children, style }) {
+export function WCircle({ children, style }: any) {
   return (
     <span style={{
       position: 'relative', display: 'inline-block', padding: '2px 6px',
@@ -216,7 +216,7 @@ export function WCircle({ children, style }) {
 }
 
 // Newsletter Subscribe block
-export function NewsletterSubscribe({ desktop = true }) {
+export function NewsletterSubscribe({ desktop = true }: any) {
   return (
     <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: desktop ? '100px 80px' : '64px 20px' }}>
       <WFade>
