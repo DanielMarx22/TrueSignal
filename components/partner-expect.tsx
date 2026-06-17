@@ -147,7 +147,7 @@ export function PartnerExpectC() {
   );
 }
 
-export function PartnerExpectMobile({ onNavy = false }) {
+export function PartnerExpectMobile({ onNavy = false }: any) {
   const bg = onNavy ? WIRE_NAVY : WIRE_PAPER;
   const fg = onNavy ? '#f3efe8' : WIRE_INK;
   const muted = onNavy ? 'rgba(243,239,232,0.7)' : '#555';

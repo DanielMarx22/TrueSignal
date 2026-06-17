@@ -46,7 +46,7 @@ export function tierLabel(t) {
   return 'Sprint Options';
 }
 
-export function ServicesHeader({ mobile }) {
+export function ServicesHeader({ mobile }: any) {
   return (
     <section style={{
       background: WIRE_NAVY, color: '#f3efe8',
@@ -69,7 +69,7 @@ export function ServicesHeader({ mobile }) {
     </section>);
 }
 
-export function ResearchNote({ mobile }) {
+export function ResearchNote({ mobile }: any) {
   return (
     <section style={{ background: WIRE_PAPER, padding: mobile ? '40px 20px' : '64px 80px' }}>
       <div style={{ maxWidth: 880, display: 'grid', gridTemplateColumns: mobile ? '1fr' : '180px 1fr', gap: mobile ? 12 : 56 }}>
@@ -81,7 +81,7 @@ export function ResearchNote({ mobile }) {
     </section>);
 }
 
-export function ServicesBottomCTA({ mobile }) {
+export function ServicesBottomCTA({ mobile }: any) {
   return (
     <section style={{
       background: WIRE_ACCENT, color: 'white',
@@ -101,7 +101,7 @@ export function ServicesBottomCTA({ mobile }) {
     </section>);
 }
 
-export function ServicesBDesktop({ activeIndex = 0 }) {
+export function ServicesBDesktop({ activeIndex = 0 }: any) {
   const active = TIERS[activeIndex];
   const others = TIERS.filter((_, i) => i !== activeIndex);
   const deepenLabel = activeIndex === 0 ?
@@ -234,7 +234,7 @@ export function ServicesBDesktopInteractive() {
     </div>);
 }
 
-export function ServicesBMobile({ activeIndex = 0 }) {
+export function ServicesBMobile({ activeIndex = 0 }: any) {
   const active = TIERS[activeIndex];
   return (
     <WireRoot>

@@ -27,7 +27,7 @@ export const PROBLEM_COLS = [
 export const INDUSTRIES = ["Consumer Goods", "Food & Beverage", "Manufacturing", "Entertainment", "Regional Business"];
 
 // Sacred hero headline
-export function HeroHeadline({ size = 76, mode = 'inline-italic', light, accent = WIRE_ACCENT, lineHeight = 1.04 }) {
+export function HeroHeadline({ size = 76, mode = 'inline-italic', light, accent = WIRE_ACCENT, lineHeight = 1.04 }: any) {
   const fg = light ? '#f3efe8' : WIRE_INK;
   if (mode === 'stacked') {
     return (
@@ -57,7 +57,7 @@ export function HeroHeadline({ size = 76, mode = 'inline-italic', light, accent 
 
 // ── Shared mini-sections ─────────────────────────────────────────
 
-export function CredibilityBar({ mobile }) {
+export function CredibilityBar({ mobile }: any) {
   return (
     <section style={{ background: WIRE_PAPER, padding: mobile ? '40px 20px' : '56px 80px' }}>
       <WLabel>Industries we've worked across</WLabel>
@@ -97,7 +97,7 @@ export function CTAStrip({ mobile }: { mobile?: boolean }) {
     </section>);
 }
 
-export function MobileFrame({ children }) {
+export function MobileFrame({ children }: any) {
   return <WireRoot>{children}</WireRoot>;
 }
 

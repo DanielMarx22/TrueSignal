@@ -25,7 +25,7 @@ export function Select({ label, options, value, onChange, required }: any) {
     </label>);
 }
 
-export function TextArea({ label, placeholder, value, onChange, required }) {
+export function TextArea({ label, placeholder, value, onChange, required }: any) {
   return (
     <label style={{ display: 'block' }}>
       <div className="mono" style={{ fontSize: 11, letterSpacing: '0.15em', color: '#888', textTransform: 'uppercase', marginBottom: 8 }}>{label}</div>
@@ -33,7 +33,7 @@ export function TextArea({ label, placeholder, value, onChange, required }) {
     </label>);
 }
 
-export function Info({ label, val }) {
+export function Info({ label, val }: any) {
   return (
     <div style={{ marginBottom: 14 }}>
       <div className="mono" style={{ fontSize: 10, letterSpacing: '0.2em', color: '#888', marginBottom: 4 }}>{label.toUpperCase()}</div>

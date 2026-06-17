@@ -104,7 +104,7 @@ export function StudyExamplesC() {
   );
 }
 
-export function StudyExamplesMobile({ onNavy = false }) {
+export function StudyExamplesMobile({ onNavy = false }: any) {
   const bg = onNavy ? WIRE_NAVY : WIRE_PAPER;
   const fg = onNavy ? '#f3efe8' : WIRE_INK;
   return (

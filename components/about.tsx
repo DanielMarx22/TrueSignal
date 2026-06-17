@@ -31,7 +31,7 @@ export function AboutHeader({ mobile }: { mobile?: boolean }) {
     </section>);
 }
 
-export function AboutCDesktop({ differentOnNavy = false }) {
+export function AboutCDesktop({ differentOnNavy = false }: any) {
   const diffBg = differentOnNavy ? WIRE_NAVY : WIRE_GRAY;
   const diffFg = differentOnNavy ? '#f3efe8' : WIRE_INK;
   const diffMuted = differentOnNavy ? 'rgba(243,239,232,0.7)' : '#4a4a4a';
@@ -140,7 +140,7 @@ export function AboutCDesktop({ differentOnNavy = false }) {
     </WireRoot>);
 }
 
-export function AboutCMobile({ differentOnNavy = false }) {
+export function AboutCMobile({ differentOnNavy = false }: any) {
   const diffBg = differentOnNavy ? WIRE_NAVY : WIRE_GRAY;
   const diffFg = differentOnNavy ? '#f3efe8' : WIRE_INK;
   const diffMuted = differentOnNavy ? 'rgba(243,239,232,0.7)' : '#4a4a4a';
