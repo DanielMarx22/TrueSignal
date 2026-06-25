@@ -114,7 +114,7 @@ export function WNavMobile({ dark }: any) {
 
 // Footer placeholder
 export function WFooter({ mobile }: { mobile?: boolean }) {
-  const logoSrc = '/logos/true-signal-lockup-A-primary-light.svg';
+  const logoSrc = '/logos/true-signal-lockup-A-primary-dark.svg';
   if (mobile) return (
     <div style={{ background: WIRE_NAVY, color: '#cfd2da', padding: '32px 20px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 18, flexGrow: 1 }}>
       <img src={logoSrc} alt="True Signal"

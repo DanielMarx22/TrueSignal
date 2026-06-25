@@ -15,8 +15,10 @@ export function SiteNav({ dark = true }: { dark?: boolean }) {
   
   // The links always stay light, but logo is dark initially on home page
   const fg = '#ffffff';
-  const logoSrc = isHomeInitial ? '/logos/true-signal-lockup-A-primary-light.svg' : '/logos/true-signal-lockup-A-primary-dark.svg';
-  const logoHeight = isHomeInitial ? 96 : 64;
+  const logoSrc = '/logos/true-signal-lockup-A-primary-dark.svg';
+  
+  // Dynamic logo sizing: huge on home page top, normal elsewhere/scrolled
+  const logoHeight = (isHomePage && !scrolled) ? 108 : 72;
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
@@ -40,8 +42,8 @@ export function SiteNav({ dark = true }: { dark?: boolean }) {
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 9999,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', 
         padding: scrolled ? '20px clamp(20px, 5vw, 80px)' : '40px clamp(20px, 5vw, 80px)', color: fg,
-        background: scrolled ? 'rgba(26, 34, 53, 0.9)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
+        background: scrolled ? '#1a2235' : 'transparent',
+        backdropFilter: 'none',
         transition: 'all 0.3s ease'
       }} className="site-nav">
         <Link href="/" style={{ textDecoration: 'none' }}>

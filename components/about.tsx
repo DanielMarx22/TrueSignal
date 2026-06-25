@@ -16,7 +16,7 @@ export function AboutHeader({ mobile }: { mobile?: boolean }) {
   return (
     <section style={{
       background: WIRE_NAVY, color: '#f3efe8',
-      padding: mobile ? '56px 20px' : '120px 80px'
+      padding: mobile ? '112px 20px 56px' : '160px 80px 120px'
     }}>
       <WFade>
       <WLabel style={{ color: WIRE_ACCENT }}>About True Signal</WLabel>
@@ -91,8 +91,10 @@ export function AboutCDesktop({ differentOnNavy = false }: any) {
         </WFade>
       </section>
 
+      <BonusSnapshots desktop />
+
       {/* Client perspective / testimonial slots */}
-      <section style={{ background: WIRE_PAPER, padding: '100px 80px' }}>
+      <section style={{ display: 'none', background: WIRE_PAPER, padding: '100px 80px' }}>
         <WFade>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 32 }}>
           <div>
@@ -133,8 +135,6 @@ export function AboutCDesktop({ differentOnNavy = false }: any) {
         </WFade>
       </section>
 
-      <BonusSnapshots desktop />
-
       <CTAStrip />
       <WFooter />
     </WireRoot>);
@@ -166,7 +166,7 @@ export function AboutCMobile({ differentOnNavy = false }: any) {
         <div style={{ height: 24 }} />
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <hr style={{ width: 24, border: 0, borderTop: `1.4px solid ${WIRE_ACCENT}`, margin: 0 }} />
-          <span className="serif" style={{ fontStyle: 'italic', fontSize: 18 }}>[Founder name]</span>
+          <span className="serif" style={{ fontStyle: 'italic', fontSize: 18 }}>Jessica</span>
         </div>
       </section>
       <section style={{ background: diffBg, color: diffFg, padding: '48px 20px' }}>
@@ -181,7 +181,9 @@ export function AboutCMobile({ differentOnNavy = false }: any) {
           </div>
         )}
       </section>
-      <section style={{ background: WIRE_PAPER, padding: '48px 20px' }}>
+      <BonusSnapshots />
+
+      <section style={{ display: 'none', background: WIRE_PAPER, padding: '48px 20px' }}>
         <WLabel>Client perspective</WLabel>
         <div style={{ height: 12 }} />
         <h2 className="serif" style={{ fontSize: 24, fontWeight: 500, lineHeight: 1.15, margin: 0 }}>What it's like to work with us.</h2>
@@ -201,8 +203,6 @@ export function AboutCMobile({ differentOnNavy = false }: any) {
           </div>
         )}
       </section>
-
-      <BonusSnapshots />
 
       <CTAStrip mobile />
       <WFooter mobile />

@@ -12,7 +12,7 @@ export const PARTNER_EXPECT = [
   {
     headline: "Fast response",
     sub: "Async questions answered within 24–48 hours, not days.",
-    body: "Strategic questions don't always wait for the next meeting. Pings, decks, and decisions land in your inbox with an senior consumer perspective— typically same-day and never beyond two business days.",
+    body: "Strategic questions don't always wait for the next meeting. Pings, decks, and decisions land in your inbox with a senior consumer perspective — typically same-day and never beyond two business days.",
     pace: "24–48 hours",
   },
   {

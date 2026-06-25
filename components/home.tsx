@@ -9,7 +9,7 @@ import {
 import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-import SideRays from './SideRays';
+
 export const HOME_SUBLINE = "True Signal LLC translates consumer insight into clear strategic direction for businesses entering new markets, scaling beyond instinct, or navigating a major decision.";
 
 export const STAR = [
@@ -107,22 +107,27 @@ export function HomeV6Desktop() {
       
       {/* Hero — V2 asymmetric 7:5 */}
       <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '120px 0', position: 'relative', overflow: 'hidden', minHeight: '85vh', display: 'flex', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <SideRays speed={0.7} rayColor1="#3B82F6" rayColor2="#C4622D" origin="top-left" opacity={0.9} intensity={1} falloff={1} tilt={-5} spread={20} />
-        </div>
+
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: `linear-gradient(to bottom, rgba(247,245,242,0) 88%, rgba(247,245,242,0.3) 93%, rgba(247,245,242,0.7) 97%, #f7f5f2 100%)` }} />
-        <WFade>
-          <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 56, padding: '0 80px', position: 'relative', zIndex: 2, width: '100%', maxWidth: 1600, margin: '0 auto', pointerEvents: 'none' }}>
-            <div style={{ pointerEvents: 'auto' }}>
-              <WLabel style={{ color: WIRE_ACCENT }}>Consumer Strategy Advisory</WLabel>
-              <div style={{ height: 32 }} />
-              <HeroHeadline light size={76} />
+        <WFade style={{ width: '100%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', paddingLeft: 'clamp(40px, 5vw, 80px)', position: 'relative', zIndex: 2, width: '100%', pointerEvents: 'none' }}>
+            <div style={{ flex: '0 1 1400px', width: '100%', display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 'clamp(24px, 4vw, 56px)', paddingRight: 'clamp(40px, 5vw, 80px)', pointerEvents: 'none' }}>
+              <div style={{ pointerEvents: 'auto', minWidth: 0 }}>
+                <WLabel style={{ color: WIRE_ACCENT }}>Consumer Strategy Advisory</WLabel>
+                <div style={{ height: 32 }} />
+                <HeroHeadline light size="clamp(48px, 6vw, 96px)" />
+              </div>
+              <div style={{ alignSelf: 'end', paddingBottom: 12, pointerEvents: 'auto', minWidth: 0 }}>
+                <hr className="wrule-orange" style={{ width: 48, margin: '0 0 20px' }} />
+                <p style={{ fontSize: 'clamp(16px, 1.2vw, 20px)', lineHeight: 1.55, opacity: 0.85, margin: 0, maxWidth: 560, overflowWrap: 'break-word' }}>{HOME_SUBLINE}</p>
+                <div style={{ height: 36 }} />
+                <WBtnPrimary href="/contact">Let's Talk</WBtnPrimary>
+              </div>
             </div>
-            <div style={{ alignSelf: 'end', paddingBottom: 12, pointerEvents: 'auto' }}>
-              <hr className="wrule-orange" style={{ width: 48, margin: '0 0 20px' }} />
-              <p style={{ fontSize: 18, lineHeight: 1.55, opacity: 0.85, margin: 0 }}>{HOME_SUBLINE}</p>
-              <div style={{ height: 36 }} />
-              <WBtnPrimary href="/contact">Let's Talk</WBtnPrimary>
+
+            {/* Animated Hero Logo for Desktop */}
+            <div className="ultrawide-only" style={{ flex: '1 1 0%', display: 'flex', justifyContent: 'center', pointerEvents: 'none', opacity: 0.9 }}>
+              <img src="/logos/true-signal-mark-star-orange.svg" alt="" style={{ width: 'clamp(200px, 15vw, 400px)' }} className="hero-logo-animating" />
             </div>
           </div>
         </WFade>
@@ -131,7 +136,7 @@ export function HomeV6Desktop() {
       {/* Problem — V2 sticky-left layout */}
       <section style={{ background: WIRE_PAPER, padding: '120px 80px' }}>
         <WFade delay={0.1}>
-          <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 80 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '5fr 7fr', gap: 80, maxWidth: 1800, margin: '0 auto' }}>
             <div style={{ position: 'sticky', top: 80, alignSelf: 'start' }}>
               <WLabel>Why True Signal</WLabel>
               <div style={{ height: 24 }} />
@@ -158,35 +163,37 @@ export function HomeV6Desktop() {
       {/* STAR — horizontal 4-up, V1 treatment */}
       <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '120px 80px' }}>
         <WFade>
-          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
-            <div>
-              <WLabel style={{ color: WIRE_ACCENT }}>How it Works</WLabel>
-              <div style={{ height: 16 }} />
-              <h2 className="serif" style={{ fontSize: 52, fontWeight: 500, lineHeight: 1.1, margin: 0, letterSpacing: '-0.015em' }}>
-                Every engagement follows the same north star.
-              </h2>
-            </div>
-            <span className="mono" style={{
-              fontSize: 11, letterSpacing: '0.3em', fontWeight: 600,
-              color: WIRE_ACCENT, textTransform: 'uppercase', flex: '0 0 auto',
-            }}>S · T · A · R</span>
-          </div>
-          <div style={{ height: 72 }} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
-            {STAR.map((s, i) =>
-              <div key={s.n} style={{ borderTop: `1.4px solid ${WIRE_ACCENT}`, paddingTop: 24 }}>
-                <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 44, color: '#8a93a6', fontWeight: 400, lineHeight: 1, marginBottom: 12 }}>{s.n}</div>
-                <div className="serif" style={{ fontSize: 30, fontWeight: 500, marginBottom: 14, color: '#fff' }}>{s.t}</div>
-                <p style={{ fontSize: 14, lineHeight: 1.55, opacity: 0.75, margin: 0 }}>{s.d}</p>
+          <div style={{ maxWidth: 1800, margin: '0 auto' }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24 }}>
+              <div>
+                <WLabel style={{ color: WIRE_ACCENT }}>How it Works</WLabel>
+                <div style={{ height: 16 }} />
+                <h2 className="serif" style={{ fontSize: 52, fontWeight: 500, lineHeight: 1.1, margin: 0, letterSpacing: '-0.015em' }}>
+                  Every engagement follows the same north star.
+                </h2>
               </div>
-            )}
+              <span className="mono" style={{
+                fontSize: 11, letterSpacing: '0.3em', fontWeight: 600,
+                color: WIRE_ACCENT, textTransform: 'uppercase', flex: '0 0 auto',
+              }}>S · T · A · R</span>
+            </div>
+            <div style={{ height: 72 }} />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
+              {STAR.map((s, i) =>
+                <div key={s.n} style={{ borderTop: `1.4px solid ${WIRE_ACCENT}`, paddingTop: 24 }}>
+                  <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 44, color: '#8a93a6', fontWeight: 400, lineHeight: 1, marginBottom: 12 }}>{s.n}</div>
+                  <div className="serif" style={{ fontSize: 30, fontWeight: 500, marginBottom: 14, color: '#fff' }}>{s.t}</div>
+                  <p style={{ fontSize: 14, lineHeight: 1.55, opacity: 0.75, margin: 0 }}>{s.d}</p>
+                </div>
+              )}
+            </div>
           </div>
         </WFade>
       </section>
 
       <CredibilityBar />
       <CTAStrip />
-      <NewsletterSubscribe desktop />
+      {/* <NewsletterSubscribe desktop /> */}
       <WFooter />
     </WireRoot>);
 }
@@ -196,9 +203,7 @@ export function HomeV6Mobile() {
     <MobileFrame>
       
       <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '48px 20px', position: 'relative', overflow: 'hidden', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
-        <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-          <SideRays speed={0.7} rayColor1="#3B82F6" rayColor2="#C4622D" origin="top-left" opacity={0.9} intensity={1} falloff={1} tilt={-5} spread={20} />
-        </div>
+
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: `linear-gradient(to bottom, rgba(247,245,242,0) 88%, rgba(247,245,242,0.3) 93%, rgba(247,245,242,0.7) 97%, #f7f5f2 100%)` }} />
         <WFade>
           <div style={{ position: 'relative', zIndex: 2, pointerEvents: 'none' }}>
@@ -249,7 +254,7 @@ export function HomeV6Mobile() {
       </section>
       <CredibilityBar mobile />
       <CTAStrip mobile />
-      <NewsletterSubscribe desktop={false} />
+      {/* <NewsletterSubscribe desktop={false} /> */}
       <WFooter mobile />
     </MobileFrame>);
 }

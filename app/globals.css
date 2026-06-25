@@ -99,3 +99,21 @@ body.sketch .wire-root .display em {
   }
   .nav-logo { height: 48px !important; }
 }
+
+@keyframes pulse-glow {
+  0% { transform: scale(1); filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.05)) brightness(1); }
+  50% { transform: scale(1.02); filter: drop-shadow(0 0 32px rgba(255, 255, 255, 0.3)) brightness(1.1); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.05)) brightness(1); }
+}
+
+@media (min-width: 1024px) {
+  .hero-logo-animating {
+    animation: pulse-glow 7s infinite ease-in-out;
+    transform-origin: center;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.ultrawide-only { display: block; }
+@media (max-width: 1799px) { .ultrawide-only { display: none !important; } }
