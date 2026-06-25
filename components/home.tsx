@@ -106,7 +106,7 @@ export function HomeV6Desktop() {
     <WireRoot>
       
       {/* Hero — V2 asymmetric 7:5 */}
-      <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '120px 0', position: 'relative', overflow: 'hidden', minHeight: '85vh', display: 'flex', alignItems: 'center' }}>
+      <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '220px 0 120px', position: 'relative', overflow: 'hidden', minHeight: '85vh', display: 'flex' }}>
 
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: `linear-gradient(to bottom, rgba(247,245,242,0) 88%, rgba(247,245,242,0.3) 93%, rgba(247,245,242,0.7) 97%, #f7f5f2 100%)` }} />
         <WFade style={{ width: '100%' }}>
@@ -202,7 +202,7 @@ export function HomeV6Mobile() {
   return (
     <MobileFrame>
       
-      <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '48px 20px', position: 'relative', overflow: 'hidden', minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
+      <section style={{ background: WIRE_NAVY, color: '#f3efe8', padding: '160px 20px 64px', position: 'relative', overflow: 'hidden', minHeight: '60vh', display: 'flex' }}>
 
         <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: `linear-gradient(to bottom, rgba(247,245,242,0) 88%, rgba(247,245,242,0.3) 93%, rgba(247,245,242,0.7) 97%, #f7f5f2 100%)` }} />
         <WFade>
